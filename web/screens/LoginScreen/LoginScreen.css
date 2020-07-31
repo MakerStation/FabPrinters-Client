@@ -1,0 +1,22 @@
+.LoginCard {
+  max-width: 500px;
+  margin: auto;
+}
+.LoginCardTitle {
+  text-align: center;
+  padding-top: 10px;
+}
+.Login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.LoginCardFooter {
+  text-align: center;
+}
+.LoginCardBodyUsername {
+  padding-bottom: 1.20rem !important;
+}
+.LoginCardBodyPassword {
+  padding-top: 1.20rem !important;
+}
