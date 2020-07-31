@@ -19,8 +19,15 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react', 'stage-2'],
-            plugins: ['transform-runtime'],
+            presets: ['@babel/env', '@babel/react'],
+            plugins: [
+              "@babel/transform-runtime",
+              ["@babel/plugin-proposal-decorators", { "legacy": true }],
+              "@babel/plugin-proposal-function-sent",
+              "@babel/plugin-proposal-export-namespace-from",
+              "@babel/plugin-proposal-numeric-separator",
+              "@babel/plugin-proposal-throw-expressions",
+            ],
           },
         },
       },
@@ -30,8 +37,15 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react', 'stage-2'],
-            plugins: ['transform-runtime'],
+            presets: ['@babel/env', '@babel/react'],
+            plugins: [
+              "@babel/transform-runtime",
+              ["@babel/plugin-proposal-decorators", { "legacy": true }],
+              "@babel/plugin-proposal-function-sent",
+              "@babel/plugin-proposal-export-namespace-from",
+              "@babel/plugin-proposal-numeric-separator",
+              "@babel/plugin-proposal-throw-expressions",
+            ],
           },
         },
       },
