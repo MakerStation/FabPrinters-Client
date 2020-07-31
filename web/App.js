@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import store, { persistor } from '../src/store/index';
+import store, { persistor } from '../src/redux/store/index';
 import Routes from './routes';
 import LoadingView from './screens/LoadingView';
 
