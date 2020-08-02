@@ -14,10 +14,10 @@ const PrintersTabs = () => {
     <Nav style={{width: "10000px"}}>
     {data.map(printer => (
       <NavItem>
-        <NavLink onClick={console.log(printer.id)} key={printer.id} className="printTab">
+        <NavLink key={printer.id} className="printTab">
           <Row >
             <Col sm={8}><span className="TabTitle">{printer.name}</span></Col>
-            <Col sm={4}><Button className="emergencyStopBtn" size="sm" theme="danger" onClick={console.log(printer.port)}><img className="emergencyStopIcon" src={require("../../../assets/img/Emergency-button.png")}/></Button></Col>
+            <Col sm={4}><Button className="emergencyStopBtn" size="sm" theme="danger" ><img className="emergencyStopIcon" src={require("../../../assets/img/Emergency-button.png")}/></Button></Col>
           </Row><br/>
           {status}
         </NavLink>
