@@ -2,22 +2,29 @@ import React, {Component, useState} from 'react';
 import styled from 'styled-components';
 import {Form, FormInput, InputGroup, InputGroupText, InputGroupAddon, Button,
         Card, CardTitle, CardBody, CardFooter, CardHeader} from 'shards-react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faUser, faLock} from '@fortawesome/free-solid-svg-icons'
 import './LoginScreen.css'
 
-export default function LoginScreen(){
-  const [username, setUsername] = useState("") //local state
-  const [password, setPassword] = useState("")
-
-  function validateInput() {
-    return username.length > 0 && password.length > 0
+export default class LoginScreen extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      username: "",
+      password: ""
+    }
   }
 
-  function onSubmit(event){
+  validateInput() {
+    return this.state.username.length > 0 && this.state.password.length > 0
+  }
+
+  onSubmit(event){
     event.preventDefault();
+    console.log(event)
   }
 
+  render() {
     return (
       <div className="Login">
         <Card className="LoginCard">
@@ -28,7 +35,7 @@ export default function LoginScreen(){
                 <InputGroupAddon type="prepend">
                   <InputGroupText><FontAwesomeIcon icon={faUser}/></InputGroupText>
                 </InputGroupAddon>
-                <FormInput autoFocus placeholder="username" id="#username" onChange={e => setUsername(e.target.value)}/>
+                <FormInput autoFocus placeholder="Username" id="#username" onChange={e => this.setState({username: e.target.value})} autoComplete="username"/>
               </InputGroup>
             </CardBody>
             <CardBody className="LoginCardBodyPassword">
@@ -36,12 +43,15 @@ export default function LoginScreen(){
                 <InputGroupAddon type="prepend">
                   <InputGroupText><FontAwesomeIcon icon={faLock}/></InputGroupText>
                 </InputGroupAddon>
-                <FormInput type="password" placeholder="password" id="#password" onChange={e => setUsername(e.target.value)}/>
+                <FormInput type="password" placeholder="Password" id="#password" onChange={e => this.setState({password: e.target.value})} autoComplete="password"/>
               </InputGroup>
             </CardBody>
-            <CardFooter className="LoginCardFooter"><Button onClick={onSubmit}>Login</Button></CardFooter>
+          <CardFooter className="LoginCardFooter">
+            <Button onClick={this.onSubmit} disabled={!this.validateInput()}>Login</Button>
+          </CardFooter>
           </Form>
         </Card>
       </div>
     )
+  }
 }
