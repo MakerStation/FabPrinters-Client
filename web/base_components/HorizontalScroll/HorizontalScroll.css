@@ -1,0 +1,7 @@
+.HorizontalScroll {
+  width: 100%;
+}
+.HorizontalScrollElements {
+  width: 100%;
+  overflow-x: scroll;
+}
