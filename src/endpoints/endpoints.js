@@ -9,6 +9,14 @@ function fetchAllPrinters() {
     return wrapPromise(promise)
 }
 
+function fetchAllCommands(id) {
+  const promise = axios.post(config.serverUrl + "/getallcommands", {id: id})
+    .then(res => res.data)
+
+    return wrapPromise(promise)
+}
+
 export {
-  fetchAllPrinters
+  fetchAllPrinters,
+  fetchAllCommands
 }
