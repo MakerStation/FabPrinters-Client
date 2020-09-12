@@ -16,7 +16,7 @@ function wrapPromise(promise) {
 
   //when throwing error, suspense detects it as "Promise not resolved yet => not ready to render"
     //in this case, suspense detects if the thrown error is a promise => fetching in progress (render fallback),
-    //if the thtwon error is something else => error inside the promise (throw again the error, might crash the app if not caught)
+    //if the thrown error is something else => error inside the promise (throw again the error, might crash the app if not caught)
   //when returning, suspense detects it as "Promise resolved => ready to render"
   const read = () => {
     switch (status) {
