@@ -4,6 +4,7 @@ import PrintersTabsList from '../../components/PrintersTabsList'
 import {Outlet} from 'react-router-dom'; //where to render things from nested routes
 import CommandLog from '../../components/CommandLog'
 import ErrorBoundary from '../../base_components/ErrorBoundary'
+import ControlPanel from '../../components/ControlPanel'
 
 export default class HomeScreen extends Component {
   constructor(props) {
@@ -16,7 +17,8 @@ export default class HomeScreen extends Component {
         <ErrorBoundary>
           <MainNavbar />
           <PrintersTabsList />
-          <CommandLog />
+          {/*<CommandLog />*/}
+          <ControlPanel />
           <Outlet />
         </ErrorBoundary>
       </>
