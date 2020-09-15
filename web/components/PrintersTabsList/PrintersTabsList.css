@@ -2,6 +2,14 @@
   font-weight: bold;
   font-size: 1.5rem;
 }
+.colTitle {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.colBtn {
+}
+
 .emergencyStopIcon {
   width: 60px;
 }
