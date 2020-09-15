@@ -17,7 +17,7 @@ const PrintersTabs = () => {
         <NavLink key={printer.id} className="printTab">
           <Row >
             <Col sm={8}><span className="TabTitle">{printer.name}</span></Col>
-            <Col sm={4}><Button className="emergencyStopBtn" size="sm" theme="danger" ><img className="emergencyStopIcon" src={require("../../../assets/img/Emergency-button.png")}/></Button></Col>
+            <Col sm={4}><Button className="emergencyStopBtn" size="sm" theme="danger" ><img className="emergencyStopIcon" src={"https://img.icons8.com/color/452/emergency-stop-button.png"}/></Button></Col>
           </Row><br/>
           {status}
         </NavLink>
