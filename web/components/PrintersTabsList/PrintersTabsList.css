@@ -9,10 +9,12 @@
   padding: 0px 0px 0px 0px !important;
   background: none !important;
   border: none !important;
+  border-radius: 30px;
 }
 .emergencyStopBtn:hover, .emergencyStopBtn:focus {
   padding: 0px 0px 0px 0px !important;
   background: none !important;
   border: none !important;
   outline: none !important;
+  border-radius: 30px;
 }
