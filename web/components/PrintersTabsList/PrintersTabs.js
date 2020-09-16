@@ -13,7 +13,7 @@ const PrintersTabs = () => {
   return (
     <Nav style={{width: "10000px"}}>
     {data.map(printer => (
-      <NavItem>
+      <NavItem key={"Main"+printer.id}>
         <NavLink key={printer.id} className="printTab">
           <Row >
             <Col sm={8} className="colTitle"><span className="TabTitle">{printer.name}</span></Col>
