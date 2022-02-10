@@ -80,7 +80,7 @@
     "jest": "^26.2.2",
     "metro-react-native-babel-preset": "^0.61.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.8.3",
+    "node-sass": "^7.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "react-test-renderer": "16.13.1",
     "sass-loader": "^9.0.2",
